@@ -26,17 +26,17 @@ services:
     build: .
     container_name: celery_worker
     env_file:
-      - .env
+      - .env.docker
     depends_on:
       - redis
       - db
-    command: celery worker -B -A worker_celery -l info --pool=solo
+    command: celery -A worker_celery worker -l info --pool=solo -B -s celerybeat-schedule
 
   bot:
     build: .
     container_name: bot
     env_file:
-      - .env
+      - .env.docker
     command: python main.py
     depends_on:
       - db

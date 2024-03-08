@@ -7,4 +7,3 @@ RUN pip install poetry
 RUN poetry config virtualenvs.create false
 RUN poetry install --no-root
 COPY ./ ./
-COPY $APP_HOME/.env.docker $APP_HOME/.env
