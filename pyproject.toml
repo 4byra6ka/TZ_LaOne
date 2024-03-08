@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "tz-laone"
+version = "0.1.0"
+description = ""
+authors = ["GAU <gau@1jz.ru>"]
+readme = "README.md"
+packages = [{include = "tz_laone"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+sqlalchemy = "^2.0.28"
+asyncio = "^3.4.3"
+python-dotenv = "^1.0.1"
+psycopg = "^3.1.18"
+psycopg-binary = "^3.1.18"
+aiohttp = "^3.9.3"
+aiogram = "^3.4.1"
+celery = "^5.3.6"
+redis = "^5.0.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
